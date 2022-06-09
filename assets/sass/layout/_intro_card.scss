@@ -1,0 +1,41 @@
+#introCard {
+    padding: 70px 0px;
+    .card {
+        background-color: $white;
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+        text-align: center;
+        padding: 30px 10px;
+        cursor: pointer;
+        border-radius: $border-radius-md;
+        border: none;
+        transition: $transition;
+        &:hover {
+            background-color: $main-color;
+            color: $white;
+            .icon{
+                color: $text-color;
+            }
+            p{
+                color: $white;
+            }
+        }
+        .icon {
+            background-color: $white-hover;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            margin: auto;
+        }
+        h3 {
+            margin: 20px 0px;
+            font-weight: 500;
+            font-size: $font-size-md;
+        }
+        p {
+            font-size: $font-size-md;
+            color: $text-p-color;
+            font-weight: 300;
+        }
+    }
+}

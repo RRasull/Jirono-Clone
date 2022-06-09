@@ -1,0 +1,5 @@
+#slider {
+    padding: 80px 10px 40px 10px;
+    @extend %slider-content;
+    @extend %slider-buttons;
+}

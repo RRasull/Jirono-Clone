@@ -1,0 +1,6 @@
+#designDevelopment{
+    @extend %items;
+    .active{
+        @extend %hover;
+     }
+}

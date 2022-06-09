@@ -1,0 +1,41 @@
+#latestBlog {
+    padding: 70px 0px;
+    .card-text {
+        @extend %center-title;
+    }
+    .blog-card {
+        padding: 35px 0px;
+        border-radius: $border-radius-md;
+    }
+    .blog-card .card-image {
+        img {
+            border-radius: $border-radius-md;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+    .blog-text {
+        text-align: center;
+        padding: 0px 10px;
+        a {
+            font-size: $font-size-lg;
+            color: $text-color;
+            text-decoration: none;
+            display: inline-block;
+            padding: 20px 0px;
+            transition: $transition;
+            &:hover{
+                color: $main-color;
+            }
+        }
+        p {
+            font-size: $font-size-md;
+            color: $text-p-color;
+        }
+        button {
+            @extend %button;
+            @extend %sign;
+        }
+    }
+}

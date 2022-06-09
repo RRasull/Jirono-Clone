@@ -1,0 +1,56 @@
+#footer {
+    padding-top: 70px;
+    background-color: $main-color;
+    color: $white;
+    .footer-nav {
+        padding-bottom: 30px;
+    }
+    .about {
+        padding: 0;
+    }
+    .about .icon {
+        padding-bottom: 30px;
+    }
+    .about p {
+        color: $white;
+        font-weight: 500;
+        font-size: $font-size-sm;
+    }
+    h4 {
+        @extend %footer-title;
+    }
+    .footer-menu-nav ul li {
+        padding: 7px 0px;
+        a {
+            @extend %footer-menu-text;
+            font-size: $font-size-sm;
+            &:hover {
+                margin-left: 10px;
+            }
+        }
+        i {
+            font-size: 10px;
+            margin-right: 5px;
+        }
+    }
+    .address .address-ul {
+        :last-child a {
+            margin: 0;
+            color: $white;
+        }
+        li {
+            padding: 7px 0px;
+            @extend %footer-menu-text;
+            font-size: $font-size-sm;
+        }
+    }
+    .copyright {
+        border-top: 1px solid $white;
+        padding: 20px 0px;
+        font-size: $font-size-sm;
+        font-weight: 400;
+        p {
+            margin: 0px;
+        }
+    }
+}

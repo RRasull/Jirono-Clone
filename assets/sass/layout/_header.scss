@@ -1,0 +1,165 @@
+@import "../abstract/extends";
+#header.header {
+    z-index: 99;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 20px 0px;
+    transition: $transition;
+    .header-nav.active {
+        display: inline-block !important;
+        transition: $transition;
+        background-color: $white;
+        width: 100%;
+        .header-ul {
+            display: inline-block !important;
+            width: 100%;
+        }
+        .header-ul li {
+            padding: 20px 0px;
+            width: 100%;
+            &:hover {
+                background-color: $white-hover;
+            }
+        }
+        .header-ul li a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 7px;
+            width: 100%;
+        }
+        .header-ul li .inner-menu {
+            width: 100%;
+            margin-top: 18px;
+            border-radius: 0px;
+            display: none;
+            position: relative !important;
+        }
+        .header-ul li .inner-menu li a {
+            padding-left: 30px;
+        }
+    }
+    .d-custom-block {
+        display: block !important;
+    }
+    .header-ul > li {
+        position: relative;
+        .inner-menu {
+            position: absolute;
+            background-color: $white;
+            width: 300%;
+            visibility: hidden;
+            border-radius: $border-radius-md;
+            box-shadow: 0 1px 28px 0 rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            transition: $transition;
+            top: -10%;
+        }
+        &:hover .inner-menu {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+        .inner-menu li {
+            transition: $transition;
+            &:hover {
+                border-left: 4px solid $main-color;
+                background-color: $white-hover;
+            }
+        }
+    }
+    .header-ul li a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: $font-size-sm;
+        font-weight: 600;
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+        padding: 8px;
+        &:hover {
+            color: $text-opc-color;
+        }
+        i {
+            font-size: $font-size-xs;
+            margin-left: 4px;
+        }
+    }
+    .sign {
+        .button {
+            @extend %button;
+            padding: 7px 35px;
+        }
+        .sign-up {
+            @extend %sign;
+            margin-left: 8px;
+            &:hover {
+                @extend %sign;
+                background-color: $white;
+                color: $main-color;
+            }
+        }
+        .sign-in {
+            @extend %sign;
+            background-color: $white;
+            color: $main-color;
+            &:hover {
+                @extend %sign;
+            }
+        }
+    }
+    .menu-btn {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .menu-burger {
+        width: 35px;
+        height: 2px;
+        background-color: $text-opc-color;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        transition: 0.1s;
+    }
+
+    .menu-burger::before,
+    .menu-burger::after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 2px;
+        background-color: $text-opc-color;
+        border-radius: 3px;
+        transition: 0.1s;
+    }
+
+    .menu-burger::before {
+        transform: translateY(-10px);
+    }
+
+    .menu-burger::after {
+        transform: translateY(10px);
+    }
+
+    .menu-btn.open .menu-burger {
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+
+    .menu-btn.open .menu-burger::before {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .menu-btn.open .menu-burger::after {
+        transform: rotate(-45deg) translate(0px, 0px);
+    }
+}
+.bg-wh-color {
+    background-color: $white !important;
+}

@@ -1,0 +1,26 @@
+#statistica {
+    @extend %fixed-bg-image;
+    .card-statistica {
+        position: relative;
+        bottom: 0px;
+        transition: $transition;
+        &:hover {
+            bottom: 20px;
+        }
+    }
+    .statistica-item {
+        text-align: center;
+        color: $white;
+        background-color: transparent;
+        p {
+            border-top: 2px dotted $white;
+            padding-top: 10px;
+            font-size: ($font-size-xs * 2);
+        }
+        span {
+            display: inline-block;
+            padding-bottom: 10px;
+            font-size: ($font-size-xs * 4);
+        }
+    }
+}

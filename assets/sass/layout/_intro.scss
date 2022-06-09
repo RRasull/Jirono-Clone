@@ -1,0 +1,95 @@
+#intro {
+    .intro-text {
+        display: flex;
+        align-items: center;
+        h1 {
+            font-size: $font-size-xl;
+            color: $text-color;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: $font-size-md;
+            color: $text-p-color;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        .learn-more {
+            @extend %sign;
+            @extend %button;
+            &:hover {
+                background-color: $main-color-hover;
+            }
+        }
+        strong {
+            color: $main-color;
+        }
+    }
+    .intro-image {
+        padding: 50px 0px;
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-columns: (2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        -ms-grid-rows: (5, 1fr);
+        grid-column-gap: 7px;
+        grid-row-gap: 7px;
+    }
+    .item {
+        img {
+            transition: $transition;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+    .intro-image :nth-child(1) {
+        grid-area: 1 / 1 / 4 / 2;
+    }
+    .intro-image :nth-child(2) {
+        grid-area: 4 / 1 / 6 / 2;
+    }
+    .intro-image :nth-child(3) {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    .intro-image :nth-child(4) {
+        grid-area: 3 / 2 / 6 / 3;
+    }
+    .intro-image .item {
+        border-radius: $border-radius-md;
+        position: relative;
+        overflow: hidden;
+        &:last-child::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $main-color;
+            opacity: $opacity;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .img-over {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50px);
+        z-index: 2;
+        color: $white;
+    }
+    .img-over-text-title {
+        padding-bottom: 10px;
+        font-size: $font-size-sm;
+    }
+    .img-over-text {
+        font-size: $font-size-md;
+        text-align: center;
+    }
+}

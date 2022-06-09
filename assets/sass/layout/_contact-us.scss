@@ -1,0 +1,23 @@
+#contactUs{
+    @extend %fixed-bg-image;
+    .contact-us-content{
+        padding: 10px 0px;
+        text-align: center;
+        p{
+            color: $white;
+            font-size: $font-size-xl;
+            font-weight: 400;
+            strong{
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+        button{
+            @extend %button;
+            @extend %sign;
+            background-color: $white;
+            color: $main-color;
+            margin-top: 20px;
+        }
+    }
+}

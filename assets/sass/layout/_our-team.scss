@@ -1,0 +1,87 @@
+#ourTeam {
+    padding: 80px 0px;
+    .center-title {
+        @extend %center-title;
+    }
+    .team-title {
+        text-align: center;
+        margin: auto;
+        h3 {
+            font-size: $font-size-md * 1.3;
+        }
+        h4 {
+            font-size: $font-size-sm;
+        }
+    }
+    .team-card-item {
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+    }
+    .team-title {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        z-index: 1;
+    }
+    .team-title h3,
+    h4 {
+        color: $white;
+        font-weight: 100;
+        z-index: 2;
+    }
+
+    .team-title::after {
+        content: "";
+        position: absolute;
+        background-image: $linear-gr;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: $transition;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .team-card-item {
+        &:hover .team-sm li a {
+            color: $white;
+        }
+        &:hover .team-title::after {
+            height: 170%;
+        }
+    }
+    .team-card-item:hover+.team-image{
+        top: -30px;
+    }
+    .team-sm {
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .team-sm-ul {
+        z-index: 3;
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .team-sm-ul li a {
+        transition: $transition;
+        color: $main-color;
+    }
+    .team-about p {
+        color: $text-color;
+        padding: 25px 20px 75px 20px;
+        text-align: center;
+    }
+    .team-image {
+        top: -45px;
+        position: relative;
+        text-align: center;
+        transition: $transition;
+    }
+    .team-image img {
+        border-radius: 50%;
+    }
+}

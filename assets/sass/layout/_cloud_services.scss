@@ -1,0 +1,7 @@
+#cloudServices {
+    background-color: $bg-gray;
+    @extend %items;
+    .active{
+       @extend %hover;
+    }
+}
